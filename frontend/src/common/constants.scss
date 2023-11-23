@@ -24,7 +24,7 @@ $GREEN_4: #006436;
 }
 
 @mixin font-h4 {
-    font: 600 24px/1.2 Montserrat;
+    font: 700 24px/1.2 Montserrat;
 }
 
 @mixin font-h5 {
@@ -55,7 +55,7 @@ $GREEN_4: #006436;
 
 // CONTAINER START:
 @mixin container() {
-    max-width: 1204px;
+    width: 1204px;
     margin-left: auto;
     margin-right: auto;
 }

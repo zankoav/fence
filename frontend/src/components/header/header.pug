@@ -1,15 +1,16 @@
 mixin header(showMenu)
     header.header
         .header__container
-            a(href="/", class="header__logo") Название фирмы
-            if showMenu
-                nav.header__menu 
-                    a(href="#products" class="header__menu-item") Наш продукт
-                    a(href="#ordering" class="header__menu-item") Порядок сотрудничества
-                    a(href="#pricing" class="header__menu-item") Стоимость сайта
-                    a(href="#faq" class="header__menu-item") Вопрос-ответ
-            a(id="header-phone" href="tel:375295558386" class="header__phone") +375 29 555 83 86
-            a(target="_blank" href="https://t.me/zanko_av" class="header__telegram")
-                img(id="header-telegram" width="24", height="24", src=require('@img/icons/telegram.svg'),alt='telegram', class='header__telegram-icon')
-
-
+            .header__left
+                img(src=require('@img/icons/logo.svg'), alt='logo', class='header__logo-icon')
+                a(href="/", class="header__logo") Название фирмы
+                if showMenu
+                    nav.header__menu
+                        a(href="#ordering" class="header__menu-item") О нас
+                        a(href="#pricing" class="header__menu-item") Продукция
+                        a(href="#faq" class="header__menu-item") Контакты
+            .header__right
+                img(src=require('@img/icons/phone.svg'), class='header__phone-icon')
+                a(href="tel:375295558386" class="header__phone") +375 29 555 83 86  
+                img(src=require('@img/icons/ellipse.svg'), class='header__ellipse-icon')
+                .header__name Павел

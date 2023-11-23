@@ -1,6 +1,81 @@
 @import './../../common/constants';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: $GRAY_2;
+    height: 72px;
+    display: flex;
+    
+    &__container {
+             @include container;
+             height: 72px;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+         }
+
+    &__left{
+        display:flex;
+        align-items: center;
+        height: 72px;
+    }
+
+    &__right{
+        display:flex;
+        align-items: center;
+        height: 32px;
+    }
+
+    &__logo {
+        @include font-h4;
+        color: $GREEN_4;
+    }
+    &__logo-icon {
+        margin-right: 44px;
+        width: 56px;
+        height: 56px;
+    }
+
+    &__menu {
+        margin-left: 88px;
+    }
+
+    &__menu-item {
+        @include font-p2;
+        color: $GRAY_1;
+        margin-right: 32px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $GREEN_3;
+            text-decoration-line: underline;
+            text-decoration-color: $GREEN_3;
+        }
+    }
+
+    &__phone {
+        @include font-p2;
+        color: $GRAY_1;
+        margin-right: 20px;
+    }
+
+    &__phone-icon {
+        margin-right: 20px;
+        width: 32px;
+        height: 32px;
+    }
+
+    &__ellipse-icon{
+        margin-right: 20px;
+    }
+    &__name{
+        @include font-p3;
+        color: $GRAY_3;
+    }
     // position: fixed;
     // top: 0;
     // left: 0;
