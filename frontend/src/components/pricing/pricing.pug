@@ -1,0 +1,31 @@
+mixin pricing(title)
+    section.pricing.pt-88(id='pricing')
+        h2.pricing__title.mb-48=title
+        .pricing__card.pricing__card_active.pricing__card_main
+            .pricing__header 
+                .pricing__header-item.pricing__header-item_active.pricing__header-item_primary С нуля
+                .pricing__header-item.pricing__header-item_secondary ПО ВАШЕМУ ДИЗАЙНУ
+            .pricing__content.pricing__content_active.pricing__content_primary.mb-48
+                .mb-32
+                    +input-field('phone', 'Телефон *', 'Пожалуйста, заполните поле', 'yes')
+                .mb-32
+                    +input-field('opponent', 'Ссылка на сайт вашего конкурента *', 'Пожалуйста, заполните поле', 'yes')
+                +textarea-field('comments', 'Дополнительная информация')
+            .pricing__content.pricing__content_secondary.mb-48
+                .mb-32
+                    +input-field('phone', 'Телефон *', 'Пожалуйста, заполните поле', 'yes')
+                .mb-32
+                    +input-field('prototip', 'Ссылка на прототип в figma *', 'Пожалуйста, заполните поле', 'yes')
+                +textarea-field('comments', 'Дополнительная информация')
+            .pricing__content-footer 
+                .pricing__content-footer-text Ввод номера телефона подтверждает ваше согласие c условиями передачи информации
+                +button-form('Отправить') 
+        .pricing__card.pricing__card_spinner 
+            +loader()
+        .pricing__card.pricing__card_thank-you 
+            .pricing__card-title.mb-16 Поздравляем!
+            .pricing__card-description.mb-40 Заявка отправлена, мы свяжемся с Вами в ближайшее время
+            img.pricing__card-icon(src=require('@img/products/img_1.svg'), alt='Успех')
+
+    
+        

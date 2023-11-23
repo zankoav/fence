@@ -1,0 +1,9 @@
+mixin button(title, link)
+    a.button(href=link)= title
+
+mixin button-form(title)
+    .button= title
+
+
+mixin button-gray(title, link, type)
+    a.button.button_gray(href=link, data-type=type)= title 

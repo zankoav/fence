@@ -1,0 +1,8 @@
+mixin welcome-mobile(title, description)
+    section.welcome-mobile
+        h1.welcome-mobile__title.mb-24=title 
+        p.welcome-mobile__description.mb-32=description
+        .welcome-mobile__button.mb-32
+            +button('Узнать стоимость', '#pricing')
+        .welcome-mobile__image
+            img.welcome-mobile__icon(width="334" height="263" src=require('@img/welcome/mobile_main.png'), alt=title)

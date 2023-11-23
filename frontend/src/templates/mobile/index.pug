@@ -1,0 +1,14 @@
+include ./../../common/mixins
+doctype html
+html
+    head
+        +meta()
+    body
+        +header-mobile() 
+        .pt-128
+            +welcome-mobile('Разработка одностраничного сайта', 'Мы предлагаем разработку одностраничного сайта любой сложности по низким ценам с гарантией технической поддержки в течении года')
+        +products-mobile()
+        +ordering-mobile('Порядок сотрудничества')
+        +pricing-mobile('Стоимость сайта')
+        +faq-mobile('Вопрос-ответ')
+        +footer-mobile()

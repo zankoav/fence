@@ -1,0 +1,12 @@
+@import './../../common/constants';
+
+.textarea-field {
+    &__textarea {
+        padding: 16px 20px;
+        @include font-p3;
+        border-radius: 8px;
+        background-color: $LS_BLUE_3;
+        outline: none;
+        width: 100%;
+    }
+}

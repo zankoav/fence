@@ -1,0 +1,51 @@
+@import './../../common/constants';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: $LS_WHITE;
+    border-bottom: 1px solid $LS_GRAY_3;
+
+    &__container {
+        @include container;
+        height: 64px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        @include font-h2;
+    }
+
+    &__menu {
+        margin-left: 52px;
+
+        &:hover .header__menu-item {
+            color: $LS_GRAY_2;
+        }
+    }
+
+    &__menu-item {
+        @include font-p3;
+        margin-right: 24px;
+        transition: color 0.3s;
+        padding: 8px 0;
+
+        &:hover {
+            color: $LS_GRAY_1 !important;
+        }
+    }
+
+    &__phone {
+        margin-left: auto;
+        @include font-p6;
+    }
+
+    &__telegram {
+        margin-left: 44px;
+        display: flex;
+    }
+}

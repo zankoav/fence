@@ -1,0 +1,10 @@
+@import './../../common/constants';
+
+.ordering {
+    @include container;
+    text-align: center;
+
+    &__title {
+        @include font-h1;
+    }
+}

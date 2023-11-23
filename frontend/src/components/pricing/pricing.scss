@@ -1,0 +1,83 @@
+@import './../../common/constants';
+
+.pricing {
+    @include container;
+    text-align: center;
+
+    &__title {
+        @include font-h1;
+    }
+
+    &__card {
+        background-color: $LS_WHITE;
+        border-radius: 24px;
+        padding: 48px 242px;
+        display: none;
+
+        &_active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_spinner {
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &_thank-you {
+            text-align: center;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    &__header-item {
+        margin: 0 1rem;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $LS_GRAY_5;
+        text-transform: uppercase;
+        border-bottom: 1px solid $LS_GRAY_3;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &_active {
+            color: $LS_GRAY_1;
+            border-color: $LS_YELLOW_1;
+        }
+    }
+
+    &__content {
+        display: none;
+        animation: fade-in 0.4s ease-in;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__content-footer {
+        display: flex;
+    }
+
+    &__content-footer-text {
+        @include font-p2;
+        text-align: left;
+        color: $LS_GRAY_5;
+        margin-right: 40px;
+    }
+
+    &__card-title {
+        @include font-h3;
+    }
+
+    &__card-description {
+        @include font-p2;
+    }
+}

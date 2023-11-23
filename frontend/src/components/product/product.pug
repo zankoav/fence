@@ -1,0 +1,9 @@
+mixin product(model, dark_blue, link)
+    - var resultClass = dark_blue ? 'product product_dark-blue': 'product';
+    div(class=resultClass)
+        h3.product__title.mb-24=model.title
+        p.product__description=model.description
+        .product__wrapper
+            img.product__icon(src=model.image, alt=model.title)
+            .product__button
+                +button-gray('Узнать стоимость', link, model.type)

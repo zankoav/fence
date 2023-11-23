@@ -1,0 +1,21 @@
+@import './../../common/constants';
+
+.button {
+    background: $LS_YELLOW_1;
+    color: $LS_GRAY_1;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 16px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s;
+
+    &_gray {
+        border-radius: 12px;
+        border: 1px solid $LS_GRAY_5;
+        background: $LS_WHITE;
+        color: $LS_GRAY_1;
+        padding: 12px 24px;
+    }
+}

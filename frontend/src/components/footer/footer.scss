@@ -1,0 +1,41 @@
+@import './../../common/constants';
+
+.footer {
+    &__top {
+        border-top: 1px solid $LS_GRAY_3;
+        background-color: $LS_WHITE;
+    }
+
+    &__top-container {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    &__logo {
+        @include font-h2;
+    }
+
+    &__phone {
+        @include font-h2;
+    }
+
+    &__phone-label {
+        @include font-p5;
+        text-align: right;
+    }
+
+    &__bottom-container {
+        @include container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    &__copy {
+        @include font-p4;
+    }
+}

@@ -1,0 +1,39 @@
+@import './../../common/constants';
+
+.footer-mobile {
+    &__top {
+        border-top: 1px solid $LS_GRAY_3;
+        background-color: $LS_WHITE;
+    }
+
+    &__top-container {
+        @include container-mobile;
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 16px;
+    }
+
+    &__logo {
+        @include font-h2;
+    }
+
+    &__phone {
+        @include font-h2;
+    }
+
+    &__phone-label {
+        @include font-p5;
+    }
+
+    &__bottom-container {
+        @include container-mobile;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bottom-copy {
+        @include font-p4;
+    }
+}

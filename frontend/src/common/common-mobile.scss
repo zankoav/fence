@@ -1,0 +1,62 @@
+@import './constants';
+@import './reset';
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color: $LS_GRAY_6;
+}
+
+// MARGIN START
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.mb-32 {
+    margin-bottom: 32px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
+.mb-64 {
+    margin-bottom: 64px;
+}
+
+.mb-74 {
+    margin-bottom: 74px;
+}
+
+// MARGIN END
+
+// PADDING START
+.pt-88 {
+    padding-top: 88px;
+}
+
+.pt-128 {
+    padding-top: 128px;
+}
+// PADDING END
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

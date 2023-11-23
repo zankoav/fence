@@ -1,0 +1,14 @@
+@import './../../common/constants';
+
+.page404-mobile {
+    @include container;
+    height: calc(100vh - 223px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        @include font-h2;
+        text-align: center;
+    }
+}

@@ -1,0 +1,35 @@
+@import './../../common/constants';
+
+.order-item-mobile {
+    display: flex;
+
+    &__number {
+        display: flex;
+        width: 56px;
+        height: 56px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background-color: $LS_YELLOW_1;
+        @include font-h2;
+        margin: 8px -28px 0 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__card {
+        background-color: $LS_GRAY_4;
+        padding: 24px 12px 32px 52px;
+        border-radius: 24px;
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    &__title {
+        @include font-h5;
+    }
+    &__description {
+        @include font-p3;
+    }
+}

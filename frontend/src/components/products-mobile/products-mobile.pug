@@ -1,0 +1,16 @@
+mixin products-mobile()
+    section.products-mobile.pt-88(id="products") 
+        h2.products-mobile__title.mb-32 Одностраничный сайт
+        .mb-24
+            +product-mobile({
+                type:'primary',
+                title: 'С НУЛЯ', 
+                description: 'Разработка сайта на основе информации о Вашем бизнесе', 
+                image: require('@img/products/img_1.svg')
+            }, false, '#pricing')
+        +product-mobile({
+            type:'secondary',
+            title: 'По Вашему дизайну', 
+            description: 'Разработка сайта на основе Вашего дизайна', 
+            image: require('@img/products/img_2.svg')
+        }, true, '#pricing')

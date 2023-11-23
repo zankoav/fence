@@ -1,0 +1,91 @@
+// COLORS START:
+$LS_WHITE: #ffffff;
+
+$LS_GRAY_1: #333333;
+$LS_GRAY_2: #9299a2;
+$LS_GRAY_3: #dddfe0;
+$LS_GRAY_4: #eaecee;
+$LS_GRAY_5: #777777;
+$LS_GRAY_6: #f6f7f8;
+$LS_GRAY_7: #cfd0d0;
+
+$LS_BLUE_1: #4e89d1;
+$LS_BLUE_2: #e2e8f0;
+$LS_BLUE_3: #ecf1f7;
+
+$LS_YELLOW_1: #ffdd2d;
+
+$LS_RED_1: #fe4e4e;
+
+// COLORS END;
+
+// TITLES START
+
+@mixin font-h1 {
+    color: $LS_GRAY_1;
+    font: 700 44px/1 Roboto;
+}
+
+@mixin font-h2 {
+    color: $LS_GRAY_1;
+    font: 700 24px/28px Roboto;
+}
+
+@mixin font-h3 {
+    color: $LS_GRAY_1;
+    font: 700 24px/28px Roboto;
+}
+
+@mixin font-h4 {
+    color: $LS_GRAY_1;
+    font: 700 18px/1 Roboto;
+}
+
+@mixin font-h5 {
+    color: $LS_GRAY_1;
+    font: 700 18px/1 Roboto;
+}
+
+@mixin font-p1 {
+    color: $LS_GRAY_1;
+    font: 400 18px/24px Roboto;
+}
+
+@mixin font-p2 {
+    color: $LS_GRAY_5;
+    font: 400 15px/18px Roboto;
+}
+
+@mixin font-p3 {
+    color: $LS_GRAY_1;
+    font: 400 15px/24px Roboto;
+}
+
+@mixin font-p4 {
+    color: $LS_GRAY_2;
+    font: 400 13px/1 Roboto;
+}
+
+@mixin font-p5 {
+    color: $LS_GRAY_2;
+    font: 400 11px/1 Roboto;
+}
+
+@mixin font-p6 {
+    color: $LS_BLUE_1;
+    font: 400 18px/24px Roboto;
+}
+
+// TITLES END
+
+// CONTAINER START:
+@mixin container() {
+    max-width: 1062px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin container-mobile() {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+// CONTAINER END;

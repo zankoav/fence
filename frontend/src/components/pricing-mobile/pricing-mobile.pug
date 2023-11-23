@@ -1,0 +1,31 @@
+mixin pricing-mobile(title)
+    section.pricing-mobile.pt-88(id='pricing')
+        h2.pricing-mobile__title.mb-32=title
+        .pricing-mobile__card.pricing-mobile__card_active.pricing-mobile__card_main
+            .pricing-mobile__header 
+                .pricing-mobile__header-item.pricing-mobile__header-item_active.pricing-mobile__header-item_primary С нуля
+                .pricing-mobile__header-item.pricing-mobile__header-item_secondary ПО ВАШЕМУ ДИЗАЙНУ
+            .pricing-mobile__content.pricing-mobile__content_active.pricing-mobile__content_primary.mb-48
+                .mb-32
+                    +input-field('phone', 'Телефон *', 'Пожалуйста, заполните поле', 'yes')
+                .mb-32
+                    +input-field('opponent', 'Ссылка на сайт вашего конкурента *', 'Пожалуйста, заполните поле', 'yes')
+                +textarea-field('comments', 'Дополнительная информация')
+            .pricing-mobile__content.pricing-mobile__content_secondary.mb-48
+                .mb-32
+                    +input-field('phone', 'Телефон *', 'Пожалуйста, заполните поле', 'yes')
+                .mb-32
+                    +input-field('prototip', 'Ссылка на прототип в figma *', 'Пожалуйста, заполните поле', 'yes')
+                +textarea-field('comments', 'Дополнительная информация')
+            .pricing-mobile__content-footer 
+                .pricing-mobile__content-footer-text Ввод номера телефона подтверждает ваше согласие c условиями передачи информации
+                +button-form('Отправить')
+        .pricing-mobile__card.pricing-mobile__card_spinner 
+            +loader()
+        .pricing-mobile__card.pricing-mobile__card_thank-you 
+            .pricing-mobile__card-title.mb-16 Поздравляем!
+            .pricing-mobile__card-description.mb-40 Заявка отправлена, мы свяжемся с Вами в ближайшее время
+            img.pricing-mobile__card-icon(src=require('@img/products/img_1.svg'), alt='Успех')
+
+    
+        

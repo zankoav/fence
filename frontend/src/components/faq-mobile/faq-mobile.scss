@@ -1,0 +1,64 @@
+@import './../../common/constants';
+
+.faq-mobile {
+    @include container-mobile;
+
+    &__title {
+        text-align: center;
+        @include font-h2;
+    }
+
+    &__card {
+        border-radius: 14px;
+        padding: 8px 20px 8px 20px;
+        background-color: $LS_WHITE;
+    }
+
+    &__card-item {
+        border-top: 1px solid $LS_GRAY_3;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &_active {
+            .faq-mobile__card-item-title::after {
+                transform: scale(-1);
+            }
+            .faq-mobile__card-item-description {
+                height: initial;
+            }
+        }
+    }
+
+    &__card-item-title {
+        @include font-h5;
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            transition: all 0.3s;
+            width: 24px;
+            height: 24px;
+            background: url('./../../img/icons/arrow.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__card-item-description {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s;
+    }
+
+    &__card-item-description-value {
+        padding-bottom: 16px;
+        padding-left: 12px;
+        @include font-p2;
+    }
+}

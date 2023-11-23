@@ -1,0 +1,18 @@
+mixin products()
+    section.products.pt-88(id='products')
+        h2.products__title.mb-48 Одностраничный сайт
+        .products__wrapper
+            .products__column
+                +product({
+                    type:'primary',
+                    title: 'С НУЛЯ', 
+                    description: 'Разработка сайта на основе информации о Вашем бизнесе', 
+                    image: require('@img/products/img_1.svg')
+                }, false, '#pricing')
+            .products__column
+                +product({
+                    type:'secondary',
+                    title: 'По Вашему дизайну', 
+                    description: 'Разработка сайта на основе  Вашего дизайна', 
+                    image: require('@img/products/img_2.svg')
+                }, true, '#pricing')

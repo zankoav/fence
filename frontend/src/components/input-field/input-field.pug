@@ -1,0 +1,5 @@
+mixin input-field(name, label, errorMessage, required = 'no')
+    .input-field(data-required=required)
+        input(class="input-field__input", name=name, placeholder=label)
+        p.input-field__error-message=errorMessage
+        

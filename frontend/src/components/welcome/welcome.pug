@@ -1,0 +1,8 @@
+mixin welcome(title, description)
+    section.welcome.pt-128
+        h1.welcome__title.mb-48=title
+        p.welcome__description.mb-40=description
+        .welcome__button.mb-74
+            +button('Узнать стоимость', '#pricing')
+        .welcome__image 
+            img.welcome__icon(width="1009" height="525" src=require('@img/welcome/desktop_main.png'), alt=title)

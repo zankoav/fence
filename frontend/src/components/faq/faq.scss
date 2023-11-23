@@ -1,0 +1,63 @@
+@import './../../common/constants';
+
+.faq {
+    @include container;
+
+    &__title {
+        text-align: center;
+        @include font-h1;
+    }
+
+    &__card {
+        border-radius: 24px;
+        padding: 16px 96px;
+        background-color: $LS_WHITE;
+    }
+
+    &__card-item {
+        border-top: 1px solid $LS_GRAY_3;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &_active {
+            .faq__card-item-title::after {
+                transform: scale(-1);
+            }
+            .faq__card-item-description {
+                height: initial;
+            }
+        }
+    }
+
+    &__card-item-title {
+        @include font-h3;
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            transition: all 0.3s;
+            width: 24px;
+            height: 24px;
+            background: url('./../../img/icons/arrow.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__card-item-description {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.3s;
+    }
+
+    &__card-item-description-value {
+        padding-bottom: 16px;
+        @include font-p3;
+    }
+}
