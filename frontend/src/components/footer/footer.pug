@@ -2,12 +2,23 @@ mixin footer
     footer.footer
         .footer__top 
             .footer__top-container
-                a.footer__logo(href="/") Lightning Soft
-                .footer__phone-wrapper 
-                    a.footer__phone(id="footer-phone" href="tel:80295558386") 8 029 555-83-86
-                    .footer__phone-label Для звонков по Беларуси
+                h2.footer__top-title.mb-56 Контактная информация
+                .footer__top-items
+                    .footer__top-item
+                        .footer__top-item-info.mb-32 
+                            img.footer__top-item-info-icon(width="32", height="32", src=require('@img/icons/place.png'))
+                            .footer__top-item-info-label г. Минск, Республика Беларусь
+                        .footer__top-item-info 
+                            img.footer__top-item-info-icon(width="32", height="32", src=require('@img/icons/email.png'))
+                            a.footer__top-item-info-label(href="mailto:zankoav@gmail.com") zankoav@gmail.com
+                    .footer__top-item
+                        .footer__top-item-info.mb-32 
+                            img.footer__top-item-info-icon(width="32", height="32", src=require('@img/icons/phone.png'))
+                            .footer__top-item-info-label
+                                a.footer__top-item-info-phone(href="tel:80295558386") 8 029 555-83-86 
+                                span.footer__top-item-info-name Александр
+                        .footer__top-item-info 
+                            img.footer__top-item-info-icon(width="32", height="32", src=require('@img/icons/time.png'))
+                            .footer__top-item-info-label Мы работаем: 9:00-19:00
         .footer__bottom 
-            .footer__bottom-container
-                .footer__copy © 2020—2023, ООО «Лайтнинг Софт»
-                a(target="_blank" href="https://t.me/zanko_av" class="footer__telegram")
-                    img(id="footer-telegram" width="24", height="24", src=require('@img/icons/telegram-gray.svg'), alt='telegram', class='footer__telegram-icon')
+            .footer__bottom-container 2023 © Copyright. «Название фирмы» Все права защищены. Не является публичной офертой.

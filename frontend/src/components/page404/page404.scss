@@ -1,14 +1,14 @@
 @import './../../common/constants';
 
 .page404 {
-    @include container;
-    height: calc(100vh - 144px);
+    height: calc(100vh - 407px);
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: $GRAY_7;
 
     &__title {
-        @include font-h1;
+        @include font-h1-h2;
         text-align: center;
     }
 }

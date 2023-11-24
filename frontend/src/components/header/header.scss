@@ -1,31 +1,26 @@
 @import './../../common/constants';
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100%;
     background-color: $GRAY_2;
     height: 72px;
     display: flex;
-    
-    &__container {
-             @include container;
-             height: 72px;
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-         }
 
-    &__left{
-        display:flex;
+    &__container {
+        @include container;
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        display: flex;
         align-items: center;
         height: 72px;
     }
 
-    &__right{
-        display:flex;
+    &__right {
+        display: flex;
         align-items: center;
         height: 32px;
     }
@@ -69,10 +64,10 @@
         height: 32px;
     }
 
-    &__ellipse-icon{
+    &__ellipse-icon {
         margin-right: 20px;
     }
-    &__name{
+    &__name {
         @include font-p3;
         color: $GRAY_3;
     }

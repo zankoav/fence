@@ -1,14 +1,14 @@
 // COLORS START:
 $GRAY_1: #282828;
-$GRAY_2: #FFFFFF;
-$GRAY_3: #AFAFAF;
+$GRAY_2: #ffffff;
+$GRAY_3: #afafaf;
 $GRAY_4: #c5c5c5;
-$GRAY_5: #4C5B5C;
-$GRAY_6: #E4E4E4;
+$GRAY_5: #4c5b5c;
+$GRAY_6: #e4e4e4;
 $GRAY_7: #f0f3f3;
 
 $GREEN_1: #019d38;
-$GREEN_2: #01371D;
+$GREEN_2: #01371d;
 $GREEN_3: #016435;
 $GREEN_4: #006436;
 // COLORS END;
@@ -64,3 +64,18 @@ $GREEN_4: #006436;
     padding-right: 12px;
 }
 // CONTAINER END;
+
+@mixin title-line() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:after {
+        content: '';
+        display: block;
+        margin-top: 8px;
+        width: 90px;
+        height: 3px;
+        background-color: $GREEN_1;
+    }
+}

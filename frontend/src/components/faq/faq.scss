@@ -5,17 +5,18 @@
 
     &__title {
         text-align: center;
-        @include font-h1;
+        color: $GRAY_1;
+        @include font-h1-h2;
+        @include title-line;
     }
 
     &__card {
         border-radius: 24px;
-        padding: 16px 96px;
-        background-color: $LS_WHITE;
+        background-color: $GRAY_2;
     }
 
     &__card-item {
-        border-top: 1px solid $LS_GRAY_3;
+        border-top: 1px solid $GRAY_3;
 
         &:first-child {
             border-top: none;
@@ -32,8 +33,9 @@
     }
 
     &__card-item-title {
-        @include font-h3;
-        padding: 16px 0;
+        @include font-h4;
+        color: $GRAY_1;
+        padding: 14px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -57,7 +59,9 @@
     }
 
     &__card-item-description-value {
-        padding-bottom: 16px;
-        @include font-p3;
+        padding-bottom: 32px;
+        padding-left: 24px;
+        color: $GRAY_1;
+        @include font-p2;
     }
 }
