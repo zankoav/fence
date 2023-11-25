@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
+const LWCWebpackPlugin = require('lwc-webpack-plugin')
 
 const WP_THEME = 'LS'
 
@@ -68,7 +69,8 @@ module.exports = (env) => {
                 minify: false,
                 chunks: ['mobile_p404'],
                 template: path.resolve(__dirname, 'src/templates/mobile/p404.pug')
-            })
+            }),
+            new LWCWebpackPlugin()
         ],
         module: {
             rules: [

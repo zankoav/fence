@@ -1,0 +1,18 @@
+@import './../../common/constants';
+
+.projects {
+    background-color: $GRAY_7;
+    padding: 40px 0 54px;
+
+    &__container {
+        @include container;
+    }
+
+    &__title {
+        @include font-h1-h2;
+        @include title-line;
+        text-align: center;
+    }
+
+    
+}

@@ -10,5 +10,9 @@ import './../../components/ordering/ordering'
 // import './../../components/input-field/input-field'
 // import './../../components/textarea-field/textarea-field'
 // import './../../components/pricing/pricing'
+import './../../components/projects/projects'
 import './../../components/faq/faq'
 import './../../components/footer/footer'
+
+
+
