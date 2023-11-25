@@ -1,7 +1,8 @@
-mixin order-item(number, title, description)
+mixin order-item(model)
     .order-item
-        .order-item__number=number
+        .order-item__number=model.number
         .order-item__card
-            h3.order-item__title.mb-16=title
-            p.order-item__description=description
+            img.order-item__icon(src=model.image, alt=model.title)
+            h3.order-item__title=model.title
+            p.order-item__description=model.description
         

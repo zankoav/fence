@@ -2,6 +2,15 @@
 
 .order-item {
     display: flex;
+    background-color: $GRAY_2;
+    width: 33.3%;
+
+    &__card {
+        margin: 48px 40px 40px 0px;
+        background-color: $GRAY_2;
+        flex-grow: 1;
+        text-align: left;
+    }
 
     &__number {
         display: flex;
@@ -10,24 +19,26 @@
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        border-radius: 12px;
-        background-color: $LS_YELLOW_1;
-        @include font-h2;
-        margin: 20px 40px 0 0;
+        background-color: $GREEN_1;
+        @include font-h5;
+        color: $GRAY_2;
     }
 
-    &__card {
-        background-color: $LS_WHITE;
-        padding: 32px 32px 32px 44px;
-        border-radius: 24px;
-        flex-grow: 1;
-        text-align: left;
+    &__icon{
+        margin-bottom: 40px;
+        width: 128px;
+        height: 128px;
     }
 
     &__title {
+        text-align: left;
+        color: $GRAY_1;
         @include font-h3;
+        margin-bottom:24px;
     }
+
     &__description {
-        @include font-p1;
+        @include font-p2;
+        color: $GRAY_1;
     }
 }

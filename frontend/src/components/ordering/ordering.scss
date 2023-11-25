@@ -2,9 +2,18 @@
 
 .ordering {
     @include container;
-    text-align: center;
 
     &__title {
-        @include font-h1;
+        text-align: center;
+        color: $GRAY_1;
+        @include font-h1-h2;
+        @include title-line;
+        margin-bottom:48px;
     }
+
+    &__container{
+        display:flex;
+        flex-direction: row;
+    }
+
 }

@@ -2,7 +2,8 @@ mixin header(showMenu)
     header.header
         .header__container
             .header__left
-                img(src=require('@img/icons/logo.svg'), alt='logo', class='header__logo-icon')
+                a(href="/")
+                    img(src=require('@img/icons/logo.svg'), alt='logo', class='header__logo-icon' href="/")
                 a(href="/", class="header__logo") Название фирмы
                 if showMenu
                     nav.header__menu
@@ -12,5 +13,5 @@ mixin header(showMenu)
             .header__right
                 img(src=require('@img/icons/phone.svg'), class='header__phone-icon')
                 a(href="tel:375295558386" class="header__phone") +375 29 555 83 86  
-                img(src=require('@img/icons/ellipse.svg'), class='header__ellipse-icon')
+                .header__ellipse-icon
                 .header__name Павел
