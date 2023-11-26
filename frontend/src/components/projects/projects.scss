@@ -2,7 +2,7 @@
 
 .projects {
     background-color: $GRAY_7;
-    padding: 40px 0 54px;
+    padding: 40px 0;
 
     &__container {
         @include container;
@@ -13,6 +13,4 @@
         @include title-line;
         text-align: center;
     }
-
-    
 }

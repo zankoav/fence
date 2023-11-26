@@ -1,6 +1,6 @@
 mixin ordering(title, description)
-    section.ordering.pt-88(id='ordering')
-        h2.ordering__title=title
+    section.ordering(id='ordering')
+        h2.ordering__title.mb-40=title
         .ordering__container
             +order-item({
                     number:"01",

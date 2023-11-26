@@ -4,7 +4,86 @@ html
     head
         +meta()
         script. 
-            var projects = 'Hello world';
+            var projects = [
+                    {
+                        place: 'Минск',
+                        date: '24.07.2023',
+                        distance: '160',
+                        price: '1600',
+                        showButton: true,
+                        buttonText: 'Хочу такой забор',
+                        icons: [
+                            {
+                                main: true,
+                                url: 'https://rotacon.by/assets/images/setka_2.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://st32.stpulscen.ru/images/product/480/556/631_big.png',
+                            },
+                            {
+                                main: false,
+                                url: 'https://zabor-bobruisk.by/wp-content/uploads/2021/10/setka-rabica-1.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://st39.stpulscen.ru/images/product/385/741/539_big.jpg',
+                            }
+                        ]
+                    },
+                    {
+                        place: 'Гродно',
+                        date: '04.05.2023',
+                        distance: '200',
+                        price: '1000',
+                        showButton: true,
+                        buttonText: 'Хочу такой забор',
+                        icons: [
+                            {
+                                main: true,
+                                url: 'https://st32.stpulscen.ru/images/product/480/556/631_big.png',
+                            },
+                            {
+                                main: false,
+                                url: 'https://rotacon.by/assets/images/setka_2.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://zabor-bobruisk.by/wp-content/uploads/2021/10/setka-rabica-1.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://st39.stpulscen.ru/images/product/385/741/539_big.jpg',
+                            }
+                        ]
+                    },
+                    {
+                        place: 'Дзержинск',
+                        date: '10.06.2023',
+                        distance: '110',
+                        price: '1250',
+                        showButton: true,
+                        buttonText: 'Хочу такой забор',
+                        icons: [
+                            {
+                                main: true,
+                                url: 'https://zabor-bobruisk.by/wp-content/uploads/2021/10/setka-rabica-1.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://st39.stpulscen.ru/images/product/385/741/539_big.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://rotacon.by/assets/images/setka_2.jpg',
+                            },
+                            {
+                                main: false,
+                                url: 'https://st32.stpulscen.ru/images/product/480/556/631_big.png',
+                            }
+                        ]
+                    }
+                ]
     body
         +header(true)
         +welcome()

@@ -1,0 +1,22 @@
+.lwc-gallary {
+    display: flex;
+
+    &__main {
+        margin-right: 32px;
+        display: flex;
+        animation: fade-in 0.2s ease-in;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__icon {
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

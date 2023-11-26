@@ -1,0 +1,10 @@
+.lwc-gallary-icon {
+    display: flex;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

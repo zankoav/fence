@@ -1,30 +1,86 @@
 <template lwc:render-mode="light">
-    <div class="lwc-projects">
-        <a href="#" class="button">go</a>
+    <div class="lwc-projects" style={style}> 
+        <c-gallary class="lwc-projects__gallary" icons={current.icons}></c-gallary>
+        <div class="lwc-projects__info">
+            <div class="lwc-projects__info-block">
+                <div class="lwc-projects__info-block-top">
+                    <div class="lwc-projects__info-block-top-place">
+                        <div class="lwc-projects__info-block-top-place-city">{current.place}</div>
+                        <div class="lwc-projects__info-block-top-place-date">{current.date}</div>
+                    </div>
+                    <div class="lwc-projects__info-block-top-navigation">
+                        <svg
+                            class="lwc-projects__info-block-top-navigation-button"
+                            onclick={handlePrev}
+                            width="46"
+                            height="48"
+                            viewBox="0 0 46 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_85)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M30.0081 48.0054L16.6688 24.0081L30.0081 0.00537109H28.3345L14.992 24.0081L28.3345 48.0054H30.0081Z"
+                                    fill="#4C5B5C"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_34_85">
+                                    <rect
+                                        width="15"
+                                        height="48"
+                                        fill="white"
+                                        transform="matrix(-1 0 0 1 30 0)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="lwc-projects__info-block-top-navigation-values">
+                            <div class="lwc-projects__info-block-top-navigation-current">
+                                {currentIndex}
+                            </div>
+                            <div class="lwc-projects__info-block-top-navigation-delimiter">/</div>
+                            <div class="lwc-projects__info-block-top-navigation-total">
+                                {projectsLength}
+                            </div>
+                        </div>
+                        <svg
+                            class="lwc-projects__info-block-top-navigation-button"
+                            onclick={handleNext}
+                            width="48"
+                            height="48"
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_34_88)">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M16.9925 48.0054L29.4425 24.0082L16.9925 0.00543213H18.5545L31.0075 24.0082L18.5545 48.0054H16.9925Z"
+                                    fill="#4C5B5C"></path>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_34_88">
+                                    <rect
+                                        width="14"
+                                        height="48"
+                                        fill="white"
+                                        transform="translate(17)"></rect>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="lwc-projects__info-block-bottom">
+                    <div class="lwc-projects__info-block-bottom-price-title">
+                        {current.distance} м2 - {current.price} руб.
+                    </div>
+                    <div
+                        if:true={current.showButton}
+                        class="lwc-projects__info-block-bottom button">
+                        {current.buttonText}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- 
-    .projects__block 
-                .projects__icons 
-                    img.projects__icon-main(width="620" height="356" src=require('@img/welcome/desktop_main.png') alt="Забор")
-                    .projects__mini-icons
-                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
-                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
-                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
-                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
-                .projects__info 
-                    .projects__info-block 
-                         .projects__info-block-top
-                            .projects__info-block-top-place 
-                                .projects__info-block-top-place-city Минск
-                                .projects__info-block-top-place-date 24.07.2023
-                            .projects__info-block-top-navigation 
-                                .projects__info-block-top-navigation-arrow-left
-                                .projects__info-block-top-navigation-current 1
-                                .projects__info-block-top-navigation-delimiter /
-                                .projects__info-block-top-navigation-total 3
-                                .projects__info-block-top-navigation-arrow-right
-                         .projects__info-block-bottom
-                            .projects__info-block-bottom-price-title 160 м2 - 1600 руб. 
-                            button(value="Хочу такой забор") -->
 </template>

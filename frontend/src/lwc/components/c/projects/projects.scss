@@ -1,3 +1,76 @@
+@import './../../../../common/constants';
+
 .lwc-projects {
-    color: red;
+    display: flex;
+    animation: fade-in 0.2s ease-in;
+
+    &__gallary {
+        flex-shrink: 0;
+    }
+
+    &__info {
+        flex-grow: 1;
+        margin: 32px 0 32px 32px;
+        border-left: 2px solid $GRAY_6;
+        padding-left: 32px;
+    }
+
+    &__info-block {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 0;
+    }
+
+    &__info-block-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-block-top-place-city,
+    &__info-block-top-place-date {
+        color: $GRAY_1;
+        @include font-h3;
+    }
+
+    &__info-block-top-navigation {
+        display: flex;
+        align-items: center;
+        @include font-p4;
+        color: $GRAY_3;
+    }
+
+    &__info-block-top-navigation-current {
+        color: $GRAY_1;
+    }
+
+    &__info-block-top-navigation-delimiter {
+        margin: 0 4px;
+    }
+
+    &__info-block-top-navigation-button {
+        cursor: pointer;
+    }
+
+    &__info-block-top-navigation-values {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        user-select: none;
+    }
+
+    &__info-block-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info-block-bottom-price-title {
+        @include font-p2;
+        color: $GRAY_1;
+        margin-right: 16px;
+        user-select: none;
+    }
 }

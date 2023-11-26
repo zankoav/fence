@@ -1,0 +1,39 @@
+<template lwc:render-mode="light">
+    <div class="lwc-gallary">
+        <img width="620" height="356" src={main.url} alt={main.alt} class="lwc-gallary__main" />
+        <div class="lwc-gallary__icons">
+            <template for:each={icons} for:item="icon">
+                <c-gallary-icon
+                    class="lwc-gallary__icon"
+                    ongallarychange={handleChange}
+                    key={icon.url}
+                    icon={icon}></c-gallary-icon>
+            </template>
+        </div>
+    </div>
+
+    <!-- 
+    .projects__block 
+                .projects__icons 
+                    
+                    .projects__mini-icons
+                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
+                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
+                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
+                        img.projects__mini-icon(width="80" height="80" src=require('@img/welcome/desktop_main.png') alt="Забор")
+                .projects__info 
+                    .projects__info-block 
+                         .projects__info-block-top
+                            .projects__info-block-top-place 
+                                .projects__info-block-top-place-city Минск
+                                .projects__info-block-top-place-date 24.07.2023
+                            .projects__info-block-top-navigation 
+                                .projects__info-block-top-navigation-arrow-left
+                                .projects__info-block-top-navigation-current 1
+                                .projects__info-block-top-navigation-delimiter /
+                                .projects__info-block-top-navigation-total 3
+                                .projects__info-block-top-navigation-arrow-right
+                         .projects__info-block-bottom
+                            .projects__info-block-bottom-price-title 160 м2 - 1600 руб. 
+                            button(value="Хочу такой забор") -->
+</template>
