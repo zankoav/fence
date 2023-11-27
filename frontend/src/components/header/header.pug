@@ -7,11 +7,9 @@ mixin header(showMenu)
                 a(href="/", class="header__logo") Название фирмы
                 if showMenu
                     nav.header__menu
-                        a(href="#ordering" class="header__menu-item") О нас
-                        a(href="#pricing" class="header__menu-item") Продукция
-                        a(href="#faq" class="header__menu-item") Контакты
+                        a(href="#ordering" class="header__menu-item") Этапы сотрудничества
+                        a(href="#pricing" class="header__menu-item") Рассчитать стоимость
+                        a(href="#faq" class="header__menu-item") Вопрос-ответ
             .header__right
                 img(src=require('@img/icons/phone.svg'), class='header__phone-icon')
                 a(href="tel:375295558386" class="header__phone") +375 29 555 83 86  
-                .header__ellipse-icon
-                .header__name Павел

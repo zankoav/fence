@@ -1,19 +1,21 @@
 mixin header-mobile()
     header.header-mobile
         .header-mobile__container
-            a(href="/", class="header-mobile__logo") Lightning Soft
+            .header-mobile__container-left
+                img(width="40", height="40", src=require('@img/icons/logo.svg'), alt="Логотип", class='header-mobile__logo-image')
+                a(href="/", class="header-mobile__logo-title") Название фирмы
             .header-mobile__menu
-                img(width="24", height="24", src=require('@img/icons/menu.svg'), alt="Меню", class='header__menu-icon')
+                img(width="24", height="24", src=require('@img/icons/menu.svg'), alt="Меню")
         .header-mobile__navigation 
             .header-mobile__navigation-top
-                a(href="/", class="header-mobile__logo") Lightning Soft
+                a(href="/", class="header-mobile__logo-title") Название фирмы
                 .header-mobile__close
-                    img(width="24", height="24", src=require('@img/icons/close.svg'), alt="Закрыть", class='header__close-icon')
+                    img(width="24", height="24", src=require('@img/icons/close.svg'), alt="Закрыть")
             .header-mobile__navigation-bottom
                 nav.header-mobile__navigation-bottom-menu 
                     a(href="#products" class="header-mobile__navigation-bottom-menu-item") Наш продукт
-                    a(href="#ordering" class="header-mobile__navigation-bottom-menu-item") Порядок сотрудничества
-                    a(href="#pricing" class="header-mobile__navigation-bottom-menu-item") Стоимость сайта
+                    a(href="#ordering" class="header-mobile__navigation-bottom-menu-item") Этапы сотрудничества
+                    a(href="#pricing" class="header-mobile__navigation-bottom-menu-item") Рассчитать стоимость
                     a(href="#faq" class="header-mobile__navigation-bottom-menu-item") Вопрос-ответ
                 .header-mobile__navigation-bottom-calls 
                     a(id="header-phone" href="tel:375295558386" class="header-mobile__navigation-bottom-phone") +375 29 555 83 86

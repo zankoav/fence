@@ -30,13 +30,16 @@
         color: $GREEN_4;
     }
     &__logo-icon {
-        margin-right: 44px;
+        margin-right: 40px;
         width: 56px;
         height: 56px;
     }
 
     &__menu {
-        margin-left: 88px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
     }
 
     &__menu-item {
@@ -64,15 +67,4 @@
         height: 32px;
     }
 
-    &__ellipse-icon {
-        margin-right: 20px;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color:  $GRAY_3;
-    }
-    &__name {
-        @include font-p3;
-        color: $GRAY_3;
-    }
 }

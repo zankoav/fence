@@ -1,29 +1,38 @@
 @import './../../common/constants';
 
 .header-mobile {
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     width: 100%;
-    background-color: $LS_WHITE;
-    border-bottom: 1px solid $LS_GRAY_3;
+    background-color: $GRAY_2;
+    border-bottom: 1px solid $GRAY_3;
     overflow: hidden;
 
     &__container {
         @include container-mobile;
-        height: 64px;
+        height: 56px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    &__logo {
-        @include font-h2;
+    &__container-left{
+        display:flex;
+        align-items: center;
+    }
+
+    &__logo-title {
+        @include font-h3;
+        color: $GREEN_4;
+    }
+
+    &__logo-image {
+        margin-right: 16px;
     }
 
     &__navigation {
-        background-color: rgba($LS_GRAY_1, 0.75);
+        background-color: rgba($GRAY_3, 0.75);
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -37,8 +46,8 @@
     }
 
     &__navigation-top {
-        background-color: $LS_WHITE;
-        border-bottom: 1px solid $LS_GRAY_3;
+        background-color: $GRAY_2;
+        border-bottom: 1px solid $GRAY_3;
         @include container-mobile;
         height: 64px;
         display: flex;
@@ -47,7 +56,7 @@
     }
 
     &__navigation-bottom {
-        background-color: $LS_WHITE;
+        background-color: $GRAY_2;
         @include container-mobile;
         padding: 18px 40px 24px;
     }
@@ -64,13 +73,14 @@
 
     &__navigation-bottom-phone {
         @include font-p3;
-        color: $LS_BLUE_1;
+        color: $GRAY_1;
     }
 
     &__navigation-bottom-menu-item {
         @include font-p3;
+        color: $GRAY_1;
         display: block;
-        border-bottom: 1px solid $LS_GRAY_3;
+        border-bottom: 1px solid $GRAY_3;
         padding: 6px 0;
 
         &:last-child {
