@@ -1,0 +1,27 @@
+@import './../../../../common/constants';
+
+.lwc-textarea-block {
+    &__textarea {
+        background-color: $GRAY_7;
+        border: 1px solid $GRAY_7;
+        @include font-p2;
+        color: $GRAY_5;
+        outline: none;
+        padding: 18px 16px;
+        border-radius: 8px;
+        width: 100%;
+
+        &_valid,
+        &:focus {
+            background-color: $GRAY_2;
+            border-color: $GREEN_1;
+        }
+    }
+
+    &__error {
+        color: $RED_1;
+        margin-top: 4px;
+        @include font-p3;
+        margin-left: 17px;
+    }
+}

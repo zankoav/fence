@@ -1,0 +1,13 @@
+<template lwc:render-mode="light">
+    <div class="lwc-input-block">
+        <input
+            type="text"
+            name={name}
+            value={value}
+            placeholder={label}
+            class={styleClass}
+            oninput={handleChange}
+            onblur={handleBlur} />
+        <p if:true={showError} class="lwc-input-block__error">{errorMessage}</p>
+    </div>
+</template>

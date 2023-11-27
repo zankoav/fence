@@ -1,0 +1,13 @@
+<template lwc:render-mode="light">
+    <div class="lwc-textarea-block">
+        <textarea
+            name={name}
+            value={value}
+            placeholder={label}
+            class={styleClass}
+            oninput={handleChange}
+            onblur={handleBlur}
+            rows="3"></textarea>
+        <p if:true={showError} class="lwc-textarea-block__error">{errorMessage}</p>
+    </div>
+</template>

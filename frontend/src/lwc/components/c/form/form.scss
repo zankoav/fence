@@ -1,0 +1,29 @@
+@import './../../../../common/constants';
+
+.lwc-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__groups {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__group {
+        margin-bottom: 32px;
+    }
+
+    &__submit-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__submit-description {
+        @include font-p2;
+        color: $GRAY_5;
+        max-width: 410px;
+    }
+}

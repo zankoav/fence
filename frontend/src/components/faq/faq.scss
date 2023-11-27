@@ -1,6 +1,7 @@
 @import './../../common/constants';
 
 .faq {
+    padding-top: 40px;
     @include container;
 
     &__title {
