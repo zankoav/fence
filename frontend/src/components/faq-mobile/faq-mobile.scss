@@ -1,21 +1,24 @@
 @import './../../common/constants';
 
 .faq-mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
     @include container-mobile;
 
     &__title {
         text-align: center;
-        @include font-h2;
+        color: $GRAY_1;
+        @include font-h4;
+        @include title-line;
     }
 
     &__card {
-        border-radius: 14px;
-        padding: 8px 20px 8px 20px;
-        background-color: $LS_WHITE;
+        border-radius: 24px;
+        background-color: $GRAY_2;
     }
 
     &__card-item {
-        border-top: 1px solid $LS_GRAY_3;
+        border-top: 1px solid $GRAY_4;
 
         &:first-child {
             border-top: none;
@@ -32,8 +35,9 @@
     }
 
     &__card-item-title {
-        @include font-h5;
-        padding: 16px 0;
+        @include font-h3;
+        color: $GRAY_1;
+        padding: 8px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -43,6 +47,7 @@
             content: '';
             display: inline-block;
             transition: all 0.3s;
+            flex-shrink: 0;
             width: 24px;
             height: 24px;
             background: url('./../../img/icons/arrow.svg') no-repeat;
@@ -57,8 +62,9 @@
     }
 
     &__card-item-description-value {
-        padding-bottom: 16px;
-        padding-left: 12px;
+        padding-bottom: 24px;
+        padding-left: 24px;
+        color: $GRAY_1;
         @include font-p2;
     }
 }

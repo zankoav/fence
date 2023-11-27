@@ -2,38 +2,72 @@
 
 .footer-mobile {
     &__top {
-        border-top: 1px solid $LS_GRAY_3;
-        background-color: $LS_WHITE;
+        background-color: $GREEN_3;
     }
 
     &__top-container {
         @include container-mobile;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__top-title {
         text-align: center;
-        padding-top: 24px;
-        padding-bottom: 16px;
+        max-width: 256px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $GRAY_2;
+        @include font-h4;
     }
 
-    &__logo {
-        @include font-h2;
+    &__top-item-info {
+        display: flex;
+        align-items: center;
     }
 
-    &__phone {
-        @include font-h2;
+    &__top-item-info-label {
+        @include font-p2;
+        color: $GRAY_2;
+        display: flex;
+        align-items: center;
     }
 
-    &__phone-label {
-        @include font-p5;
+    &__top-item-info-phone {
+        color: $GRAY_2 !important;
+    }
+
+    &__top-item-info-icon {
+        margin-right: 8px;
+    }
+
+    &__top-item-info-name {
+        @include font-p1;
+        color: $GRAY_3;
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: $GRAY_3;
+            border-radius: 2px;
+            margin-right: 12px;
+        }
+    }
+
+    &__bottom {
+        background-color: $GREEN_2;
     }
 
     &__bottom-container {
         @include container-mobile;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__bottom-copy {
-        @include font-p4;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        @include font-p1;
+        text-align: center;
+        color: $GRAY_2;
     }
 }

@@ -2,14 +2,21 @@ mixin footer-mobile
     footer.footer-mobile
         .footer-mobile__top 
             .footer-mobile__top-container
-                .mb-20
-                    a.footer-mobile__logo(href="/") Lightning Soft
-                .footer-mobile__phone-wrapper
-                    a.footer-mobile__phone(id="footer-phone" href="tel:80295558386") 8 029 555-83-86
-                .footer-mobile__phone-label.mb-20 Для звонков по Беларуси
-                a(target="_blank" href="https://t.me/zanko_av" class="footer-mobile__telegram")
-                    img(id="footer-telegram" width="24", height="24", src=require('@img/icons/telegram-gray.svg'), alt='telegram',  class='footer-mobile__telegram-icon')
-        .footer-mobile__bottom
-            .footer-mobile__bottom-container
-                .footer-mobile__bottom-copy © 2020—2023, ООО «Лайтнинг Софт»
-                
+                h2.footer-mobile__top-title.mb-48 Контактная информация 
+                .footer-mobile__top-items
+                    .footer-mobile__top-item-info.mb-24 
+                        img.footer-mobile__top-item-info-icon(width="32", height="32", src=require('@img/icons/place.png'))
+                        .footer-mobile__top-item-info-label г. Минск, Республика Беларусь
+                    .footer-mobile__top-item-info.mb-24 
+                        img.footer-mobile__top-item-info-icon(width="32", height="32", src=require('@img/icons/email.png'))
+                        a.footer-mobile__top-item-info-label(href="mailto:zankoav@gmail.com") zankoav@gmail.com
+                    .footer-mobile__top-item-info.mb-24 
+                        img.footer-mobile__top-item-info-icon(width="32", height="32", src=require('@img/icons/phone.png'))
+                        .footer-mobile__top-item-info-label
+                            a.footer-mobile__top-item-info-phone(href="tel:80295558386") 8 029 555-83-86 
+                            span.footer-mobile__top-item-info-name Александр
+                    .footer-mobile__top-item-info 
+                        img.footer-mobile__top-item-info-icon(width="32", height="32", src=require('@img/icons/time.png'))
+                        .footer-mobile__top-item-info-label Мы работаем: 9:00-19:00
+        .footer-mobile__bottom 
+            .footer-mobile__bottom-container 2023 © Copyright. «Название фирмы» Все права защищены. Не является публичной офертой.

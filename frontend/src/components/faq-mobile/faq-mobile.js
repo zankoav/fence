@@ -1,6 +1,7 @@
 import './faq-mobile.scss'
 
 document.addEventListener('DOMContentLoaded', function (event) {
+    // Your code to run since DOM is loaded and ready
     document.querySelectorAll('.faq-mobile__card-item-title').forEach((item) => {
         item.onclick = function () {
             if (this.parentNode.classList.contains('faq-mobile__card-item_active')) {
