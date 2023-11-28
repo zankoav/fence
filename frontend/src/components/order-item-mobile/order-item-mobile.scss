@@ -26,8 +26,10 @@
     }
 
     &__icon {
-        margin: 0px 52px 24px 40px;
+        padding: 0px 40px 24px;
+        width: 100%;
         object-fit: cover;
+        height: 50vw;
     }
 
     &__title {
@@ -35,6 +37,6 @@
         color: $GRAY_1;
     }
     &__description {
-        @include font-p3;
+        @include font-p2;
     }
 }

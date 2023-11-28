@@ -1,0 +1,55 @@
+<template lwc:render-mode="light">
+    <div class="lwc-pricing">
+        <div class="lwc-pricing__calculator mb-40">
+            <m-radio-group
+                model={fenceHeightModel}
+                onchange={handleGroupChange}
+                class="lwc-pricing__calculator-item"></m-radio-group>
+            <m-radio-group
+                model={meshThicknessModel}
+                onchange={handleGroupChange}
+                class="lwc-pricing__calculator-item"></m-radio-group>
+            <m-radio-group
+                model={pillarsHeightModel}
+                onchange={handleGroupChange}
+                class="lwc-pricing__calculator-item"></m-radio-group>
+            <div class="lwc-pricing__calculator-length mb-32">
+                <div class="lwc-pricing__calculator-length-label">Длина забора, м.п.:</div>
+                <input
+                    type="text"
+                    value={distance}
+                    placeholder="Длина"
+                    oninput={handleChangeDistance}
+                    class={inputClasses} />
+            </div>
+            <div class="lwc-pricing__calculator-price">
+                Стоимость забора:<span class="lwc-pricing__calculator-price-value">{price}</span>
+                <span if:true={distance} class="lwc-pricing__calculator-currency">руб.</span>
+            </div>
+        </div>
+        <div class="lwc-pricing__form-block">
+            <template if:true={loading}>
+                <div class="lwc-pricing__form-loader">
+                    <div class="loader"></div>
+                </div>
+            </template>
+            <template if:true={finish}>
+                <div class="lwc-pricing__form-finish">
+                    <div class="lwc-pricing__form-finish-title">Данные успешно отправлены</div>
+                    <div class="lwc-pricing__form-finish-description">
+                        Мы скоро свяжемся с вами, благодрим за сотрудничество
+                    </div>
+                </div>
+            </template>
+            <template if:true={mainView}>
+                <p class="lwc-pricing__form-description">
+                    Для продолжения оформления заказа, заполните пожалуйста форму ниже
+                </p>
+                <m-form
+                    onsendform={handleSubmit}
+                    class="lwc-pricing__form"
+                    fence-data={fenceData}></m-form>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,76 @@
+<template lwc:render-mode="light">
+    <div class="lwc-projects" style={style}>
+        <m-gallary class="lwc-projects__gallary" icons={current.icons}></m-gallary>
+        <div class="lwc-projects__info">
+            <div class="lwc-projects__info-place-city">{current.place}</div>
+            <div class="lwc-projects__info-place-date mb-24">{current.date}</div>
+            <div class="lwc-projects__info-price-title mb-32">
+                {current.distance} м2 - {current.price} руб.
+            </div>
+            <div if:true={current.showButton} class="mb-40">
+                <div class="button">{current.buttonText}</div>
+            </div>
+            <div class="lwc-projects__info-navigation">
+                <svg
+                    class="lwc-projects__info-navigation-button"
+                    onclick={handlePrev}
+                    width="46"
+                    height="48"
+                    viewBox="0 0 46 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_34_85)">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M30.0081 48.0054L16.6688 24.0081L30.0081 0.00537109H28.3345L14.992 24.0081L28.3345 48.0054H30.0081Z"
+                            fill="#4C5B5C"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_34_85">
+                            <rect
+                                width="15"
+                                height="48"
+                                fill="white"
+                                transform="matrix(-1 0 0 1 30 0)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="lwc-projects__info-navigation-values">
+                    <div class="lwc-projects__info-navigation-current">
+                        {currentIndex}
+                    </div>
+                    <div class="lwc-projects__info-navigation-delimiter">/</div>
+                    <div class="lwc-projects__info-navigation-total">
+                        {projectsLength}
+                    </div>
+                </div>
+                <svg
+                    class="lwc-projects__info-navigation-button"
+                    onclick={handleNext}
+                    width="48"
+                    height="48"
+                    viewBox="0 0 48 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_34_88)">
+                        <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M16.9925 48.0054L29.4425 24.0082L16.9925 0.00543213H18.5545L31.0075 24.0082L18.5545 48.0054H16.9925Z"
+                            fill="#4C5B5C"></path>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_34_88">
+                            <rect
+                                width="14"
+                                height="48"
+                                fill="white"
+                                transform="translate(17)"></rect>
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+</template>

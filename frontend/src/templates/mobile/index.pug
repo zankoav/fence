@@ -1,12 +1,16 @@
 include ./../../common/mixins
+- var projects = JSON.stringify(require(`./../projects.json`));
+
 doctype html
 html
     head
         +meta()
+        script. 
+            var projects = !{projects}
     body
         +header-mobile()
         +welcome-mobile('Заборы из сетки-рабицы с установкой под ключ', 'Мы предлагаем большой выбор заборов по оптимальной цене с выгодными условиями.')
-        +products-mobile()
+        +projects-mobile()
         +ordering-mobile('Порядок работ')
         +pricing-mobile('Стоимость сайта')
         +faq-mobile('Вопрос-ответ')

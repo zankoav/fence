@@ -1,0 +1,23 @@
+.lwc-gallary {
+    &__main {
+        width: 100%;
+        object-fit: cover;
+        display: flex;
+        animation: fade-in 0.2s ease-in;
+        margin-bottom: 16px;
+    }
+
+    &__icons {
+        display: flex;
+        max-width: initial;
+        margin-left: -6px;
+        margin-right: -6px;
+    }
+
+    &__icon {
+        padding-left: 6px;
+        padding-right: 6px;
+        flex: 1 0 25%;
+        max-width: 25%;
+    }
+}

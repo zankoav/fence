@@ -1,0 +1,34 @@
+<template lwc:render-mode="light">
+    <div class="lwc-form">
+        <div class="lwc-form__groups">
+            <c-input
+                name="fio"
+                required
+                value={formData.fio}
+                class="lwc-form__group"
+                label="Имя*"
+                error-message="Введите имя"
+                onchange={handleFieldChange}></c-input>
+            <c-input
+                required
+                name="phone"
+                value={formData.phone}
+                class="lwc-form__group"
+                label="Tелефона*"
+                error-message="Введите номер телефона"
+                onchange={handleFieldChange}></c-input>
+            <c-textarea
+                name="info"
+                label="Дополнительная информация"
+                value={formData.info}
+                class="lwc-form__group"
+                onchange={handleFieldChange}></c-textarea>
+        </div>
+        <div class="lwc-form__submit-block">
+            <div class="lwc-form__submit-button button" onclick={handleSubmit}>Отправить</div>
+            <p class="lwc-form__submit-description">
+                Ввод номера телефона подтверждает ваше согласие c условиями передачи информации
+            </p>
+        </div>
+    </div>
+</template>

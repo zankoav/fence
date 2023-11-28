@@ -2,7 +2,7 @@ mixin order-item-mobile(model)
     .order-item-mobile
         .order-item-mobile__number=model.number
         img.order-item-mobile__icon(width="216" height="144" src=model.image, alt=model.title)
-        .order-item-mobile__card
+        .order-item-mobile__card 
             h3.order-item-mobile__title.mb-16=model.title
             p.order-item-mobile__description.mb-40=model.description
         

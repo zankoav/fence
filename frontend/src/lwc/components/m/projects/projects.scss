@@ -1,0 +1,57 @@
+@import './../../../../common/constants';
+
+.lwc-projects {
+    display: flex;
+    flex-direction: column;
+    animation: fade-in 0.2s ease-in;
+
+    &__gallary {
+        margin-bottom: 16px;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__info-place-city,
+    &__info-place-date {
+        color: $GRAY_1;
+        @include font-h3;
+    }
+
+    &__info-price-title {
+        @include font-p2;
+        color: $GRAY_1;
+        user-select: none;
+    }
+
+    &__info-navigation {
+        display: flex;
+        align-items: center;
+        @include font-p4;
+        color: $GRAY_3;
+        justify-content: space-between;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    &__info-navigation-current {
+        color: $GRAY_1;
+    }
+
+    &__info-navigation-delimiter {
+        margin: 0 4px;
+    }
+
+    &__info-navigation-button {
+        cursor: pointer;
+    }
+
+    &__info-navigation-values {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        user-select: none;
+    }
+}
