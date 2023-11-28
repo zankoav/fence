@@ -3,8 +3,13 @@
 .ordering-mobile {
     @include container-mobile;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 
     &__title {
-        @include font-h2;
+        @include font-h4;
+        @include title-line;
+        color: $GRAY_1;
+        margin-top: 40px;
     }
 }

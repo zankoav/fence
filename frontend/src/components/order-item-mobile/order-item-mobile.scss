@@ -2,32 +2,37 @@
 
 .order-item-mobile {
     display: flex;
+    @include container-mobile;
+    flex-direction: column;
 
     &__number {
         display: flex;
-        width: 56px;
-        height: 56px;
+        width: 40px;
+        height: 40px;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        border-radius: 14px;
+        border-radius: 0px;
         background-color: $GREEN_1;
-        @include font-h2;
-        margin: 8px -28px 0 0;
+        @include font-h5;
+        color: $GRAY_2;
         position: relative;
         z-index: 1;
     }
 
     &__card {
-        background-color: $LS_GRAY_4;
-        padding: 24px 12px 32px 52px;
-        border-radius: 24px;
         flex-grow: 1;
-        text-align: left;
+        text-align: center;
+    }
+
+    &__icon {
+        margin: 0px 52px 24px 40px;
+        object-fit: cover;
     }
 
     &__title {
-        @include font-h5;
+        @include font-h3;
+        color: $GRAY_1;
     }
     &__description {
         @include font-p3;
